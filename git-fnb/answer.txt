@@ -1,0 +1,11 @@
+Các bước đẩy code lên GitHub: tại folder, ở terminal chạy câu lệnh theo thứ tự sau: 
+1. git init
+2. git add .
+3. git commit -m "Lesson-01"
+4. git branch -M main
+5. git remote add origin https://github.com/Hanh199/pw-fnb-10.git
+6. git push -u origin main
+
+Cấu hình Git username và email:
+git config --global user.name 'Hanh199'
+git config --global user.email 'hanhluu010@gmail.com'
