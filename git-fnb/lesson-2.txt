@@ -1,0 +1,44 @@
+1. Giải thích các câu lệnh: git init, git add <file_name>, git add ., git commit -m "message"
+- git init: 
+  + Tạo một repository Git mới trong thư mục hiện tại.
+  + Sau khi chạy lệnh này, Git sẽ tạo ra một thư mục ẩn .git/ để lưu toàn bộ lịch sử phiên bản, cấu hình, và thông tin quản lý code.
+  ==> Chỉ cần chạy một lần duy nhất để biến thư mục thành repository Git, các lần commit sau không cần chạy lại
+- git add <file_name>
+  + Thêm một file cụ thể vào staging area (khu vực chuẩn bị commit).
+  + File đó sẽ được đánh dấu (chọn) để đưa vào commit.
+  ==> Chỉ <file_name> được thêm vào staging area để commit
+- git add .
+  + Thêm toàn bộ thay đổi (file mới, file đã chỉnh sửa, file đã xóa) trong thư mục hiện tại và các thư mục con vào staging area.
+  + Tất cả các file đó sẽ được đánh dấu (chọn) để đưa vào commit.
+  ==> Toàn bộ các thay đổi trong project được vào staging area để commit 
+- git commit -m "message" : commit các phần đã được đánh dấu vào staging area lên repo với nội dung "message"
+
+2. Lesson 2: tạo folder Lession-2
+a. Tạo 3 file: file1, file2, file3 
+- Working Directory: file1 (untracked), file2 (untracked), file3 (untracked)
+- Staging Area: (trống)
+- Repository: (chưa có repository)
+b. Chạy lệnh: git init
+- Working Directory: file1 (untracked), file2 (untracked), file3 (untracked)
+- Staging Area: (trống)
+- Repository: đã khởi tạo repository Lesson-2 (chưa có commit nào)
+c. Chạy lệnh: git commit -m "init project"
+- Working Directory: file1 (untracked), file2 (untracked), file3 (untracked)
+- Staging Area: (trống)
+- Repository: có 1 commit rỗng với nội dung "init project"
+d. Chạy lệnh: git add file1
+- Working Directory: file1 (tracked, staged), file2 (untracked), file3 (untracked)
+- Staging Area: (file1)
+- Repository: có 1 commit rỗng với nội dung "init project"
+e. Chạy lệnh: git commit -m"add file1"
+- Working Directory: file1 (Tracked), file2 (untracked), file3 (untracked)
+- Staging Area: (Trống)
+- Repository: (file1)
+  + có 1 commit rỗng với nội dung "init project"
+  + có 1 commit chứa file1 với nội dung "add file1"
+f. Chạy lệnh: git add file
+- Working Directory: file1 (Tracked), file2 (untracked), file3 (untracked)
+- Staging Area: (Trống)
+- Repository: (file1)
+  + có 1 commit rỗng với nội dung "init project"
+  + có 1 commit chứa file1 với nội dung "add file1"
